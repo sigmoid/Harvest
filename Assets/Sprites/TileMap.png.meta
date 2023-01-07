@@ -183,8 +183,8 @@ TextureImporter:
       name: TileMap_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 448
+        x: 96
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -204,8 +204,8 @@ TextureImporter:
       name: TileMap_4
       rect:
         serializedVersion: 2
-        x: 64
-        y: 448
+        x: 128
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -221,6 +221,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: TileMap_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02629275bcd38ff41bfd835e065fd930
+      internalID: -116005722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef9a7dbe93fb0c84db5eb99209974834
+      internalID: 2147436550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5563f8f0501734fa565688ec5c8e78
+      internalID: 1246915498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c17b4935221164385666606b770844
+      internalID: -1771226488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -232,9 +316,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      TileMap_5: -116005722
       TileMap_4: 1918988443
       TileMap_0: 140553684
       TileMap_3: -1398556268
+      TileMap_6: 2147436550
+      TileMap_7: 1246915498
+      TileMap_8: -1771226488
       TileMap_2: 2017905101
       TileMap_1: 1045506345
   spritePackingTag: 

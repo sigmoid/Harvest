@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour
 
 	private TileMapManager _tileMap;
 
+	private Toolbelt _toolbelt;
+
 	// Start is called before the first frame update
 	void Start()
     {
@@ -49,6 +51,8 @@ public class PlayerController : MonoBehaviour
 		_mainCam = FindObjectOfType<Camera>();
 
 		_tileMap = FindObjectOfType<TileMapManager>();
+
+		_toolbelt = GetComponent<Toolbelt>();
 
 		Scythe.SetActive(false);
     }
@@ -96,10 +100,21 @@ public class PlayerController : MonoBehaviour
         var movement = PlayerControls.ReadValue<Vector2>();
 		var click = PlayerClicked.WasPressedThisFrame();
 		var rightClick = PlayerRightClicked.WasPerformedThisFrame();
+		string tool = _toolbelt.GetCurrentTool().Name;
 
 		SetFacing(movement);
 		UpdateScythe(click);
-		UpdateHoe(rightClick);
+		if (tool == "Hoe")
+		{ 
+			UpdateHoe(rightClick);
+		}
+		if (tool == "Seed")
+		{
+			UpdateSeed(rightClick);
+		}
+
+
+	
 		Move(movement);
         
 	}
@@ -128,6 +143,7 @@ public class PlayerController : MonoBehaviour
 			diff = diff.normalized;
 			var theta = Mathf.Atan2(diff.y, diff.x) + Mathf.PI * 1.5f;
 			Scythe.transform.rotation = Quaternion.EulerRotation(new Vector3(0, 0, theta));
+			Scythe.transform.localPosition = Scythe.transform.up;
 		}
 	}
 
@@ -141,6 +157,15 @@ public class PlayerController : MonoBehaviour
 		{
 			Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 			_tileMap.Hoe(mousePosition);
+		}
+	}
+
+	private void UpdateSeed(bool rightClicked)
+	{
+		if (rightClicked)
+		{
+			Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+			_tileMap.Plant(mousePosition);
 		}
 	}
 

@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="Root">
+        <ui:VisualElement name="ToolBar" style="justify-content: space-around; align-items: auto; bottom: 10%; height: 50px; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; width: 80%; left: 10%; position: absolute; top: 483px; flex-direction: row; background-color: rgba(79, 79, 79, 255); border-top-left-radius: 17px; border-bottom-left-radius: 17px; border-top-right-radius: 17px; border-bottom-right-radius: 17px;">
+            <ui:Button text="Hoe" display-tooltip-when-elided="true" name="Button" style="width: 43px; height: 100%;" />
+            <ui:Button text="Seed" display-tooltip-when-elided="true" name="Button" style="width: 43px; height: 100%;" />
+            <ui:Button text="Button" display-tooltip-when-elided="true" name="Button" style="width: 43px; height: 100%;" />
+            <ui:Button text="Button" display-tooltip-when-elided="true" name="Button" style="width: 43px; height: 100%;" />
+            <ui:Button text="Button" display-tooltip-when-elided="true" name="Button" style="width: 43px; height: 100%;" />
+            <ui:Button text="Button" display-tooltip-when-elided="true" name="Button" style="width: 43px; height: 100%;" />
+            <ui:Button text="Button" display-tooltip-when-elided="true" name="Button" style="width: 43px; height: 100%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
