@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Tiles
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: e9864eb3d94b02c4a93959eff089fd13, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 1918988443, guid: e9864eb3d94b02c4a93959eff089fd13, type: 3}
+  - {fileID: 2017905101, guid: e9864eb3d94b02c4a93959eff089fd13, type: 3}
+  - {fileID: -1398556268, guid: e9864eb3d94b02c4a93959eff089fd13, type: 3}
+  - {fileID: 140553684, guid: e9864eb3d94b02c4a93959eff089fd13, type: 3}
+  - {fileID: 1045506345, guid: e9864eb3d94b02c4a93959eff089fd13, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - TileMap_4
+  - TileMap_2
+  - TileMap_3
+  - TileMap_0
+  - TileMap_1
+  m_RenderDataMap: {}
+  m_Tag: Tiles
+  m_IsVariant: 0
