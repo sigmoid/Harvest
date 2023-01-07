@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
 
 	public InputAction PlayerClicked;
 
+	public InputAction PlayerRightClicked;
+
     public float MoveSpeed = 10.0f;
 
 	public GameObject Scythe;
@@ -17,6 +19,8 @@ public class PlayerController : MonoBehaviour
 	public float ScytheTime = 0.2f;
 
     private Animator _animator;
+
+	public float HoeCoolDown = 0.2f;
 
     private int _facingLeftAnimId;
 	private int _facingRightAnimId;
@@ -29,6 +33,10 @@ public class PlayerController : MonoBehaviour
 
 	private Camera _mainCam;
 
+	private float _hoeCoolDownTimer;
+
+	private TileMapManager _tileMap;
+
 	// Start is called before the first frame update
 	void Start()
     {
@@ -39,6 +47,8 @@ public class PlayerController : MonoBehaviour
 		_facingDownAnimId = Animator.StringToHash("FacingDown");
 
 		_mainCam = FindObjectOfType<Camera>();
+
+		_tileMap = FindObjectOfType<TileMapManager>();
 
 		Scythe.SetActive(false);
     }
@@ -70,12 +80,14 @@ public class PlayerController : MonoBehaviour
 	{
         PlayerControls.Enable();
 		PlayerClicked.Enable();
+		PlayerRightClicked.Enable();
 	}
 
 	private void OnDisable()
 	{
         PlayerControls.Disable();
 		PlayerClicked.Disable();
+		PlayerRightClicked.Disable();
 	}
 
 	// Update is called once per frame
@@ -83,9 +95,11 @@ public class PlayerController : MonoBehaviour
     {
         var movement = PlayerControls.ReadValue<Vector2>();
 		var click = PlayerClicked.WasPressedThisFrame();
+		var rightClick = PlayerRightClicked.WasPerformedThisFrame();
 
 		SetFacing(movement);
 		UpdateScythe(click);
+		UpdateHoe(rightClick);
 		Move(movement);
         
 	}
@@ -114,6 +128,19 @@ public class PlayerController : MonoBehaviour
 			diff = diff.normalized;
 			var theta = Mathf.Atan2(diff.y, diff.x) + Mathf.PI * 1.5f;
 			Scythe.transform.rotation = Quaternion.EulerRotation(new Vector3(0, 0, theta));
+		}
+	}
+
+	private void UpdateHoe(bool rightClicked)
+	{
+		if (_hoeCoolDownTimer > 0)
+		{
+			_hoeCoolDownTimer -= Time.deltaTime;
+		}
+		else if(rightClicked)
+		{
+			Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+			_tileMap.Hoe(mousePosition);
 		}
 	}
 

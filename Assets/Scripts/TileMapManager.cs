@@ -6,6 +6,9 @@ using UnityEngine.Tilemaps;
 public class TileMapManager : MonoBehaviour
 {
     public Tilemap PlantsMap;
+    public Tilemap GroundMap;
+
+    public Tile DirtTile;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +22,15 @@ public class TileMapManager : MonoBehaviour
         
     }
 
-    public void Harvest(Vector3Int position)
+    public void Harvest(Vector3 position)
     {
-        PlantsMap.SetTile(position, null);
+        var cellPos = PlantsMap.WorldToCell(position);
+        PlantsMap.SetTile(cellPos, null);
+    }
+
+    public void Hoe(Vector3 position)
+    {
+        var cellPos = GroundMap.WorldToCell(position);
+        GroundMap.SetTile(cellPos, DirtTile);
     }
 }
