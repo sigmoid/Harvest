@@ -389,6 +389,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: TileMap_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7899d7152430441bc4b148f853aed9
+      internalID: -2052295839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap_14
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6961906e93a8ac7488751d572c848080
+      internalID: -1135956075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -400,6 +442,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      TileMap_13: -2052295839
       TileMap_5: -116005722
       TileMap_4: 1918988443
       TileMap_9: 1616368091
@@ -407,6 +450,7 @@ TextureImporter:
       TileMap_0: 140553684
       TileMap_3: -1398556268
       TileMap_11: 468686497
+      TileMap_14: -1135956075
       TileMap_6: 2147436550
       TileMap_10: -1963662324
       TileMap_7: 1246915498

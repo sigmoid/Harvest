@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour
 
 	private Inventory _inventory;
 
+	private Rigidbody2D _rigidBody;
+
 	// Start is called before the first frame update
 	void Start()
     {
@@ -57,6 +59,8 @@ public class PlayerController : MonoBehaviour
 		_toolbelt = FindObjectOfType<Toolbelt>();
 
 		_inventory = FindObjectOfType<Inventory>();
+
+		_rigidBody= FindObjectOfType<Rigidbody2D>();
 
 		Scythe.SetActive(false);
     }
@@ -179,6 +183,6 @@ public class PlayerController : MonoBehaviour
 
 	private void Move(Vector2 movement)
 	{
-		transform.position += new Vector3(movement.x, movement.y, 0) * MoveSpeed * Time.deltaTime;
+		_rigidBody.velocity = movement * MoveSpeed;
 	}
 }
