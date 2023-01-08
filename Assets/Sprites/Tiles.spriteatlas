@@ -38,7 +38,11 @@ SpriteAtlas:
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 468686497, guid: e9864eb3d94b02c4a93959eff089fd13, type: 3}
+  - {fileID: -1963662324, guid: e9864eb3d94b02c4a93959eff089fd13, type: 3}
+  - {fileID: 1454349888, guid: e9864eb3d94b02c4a93959eff089fd13, type: 3}
   - {fileID: -1771226488, guid: e9864eb3d94b02c4a93959eff089fd13, type: 3}
+  - {fileID: 1616368091, guid: e9864eb3d94b02c4a93959eff089fd13, type: 3}
   - {fileID: 2147436550, guid: e9864eb3d94b02c4a93959eff089fd13, type: 3}
   - {fileID: 1246915498, guid: e9864eb3d94b02c4a93959eff089fd13, type: 3}
   - {fileID: 1918988443, guid: e9864eb3d94b02c4a93959eff089fd13, type: 3}
@@ -48,7 +52,11 @@ SpriteAtlas:
   - {fileID: 140553684, guid: e9864eb3d94b02c4a93959eff089fd13, type: 3}
   - {fileID: 1045506345, guid: e9864eb3d94b02c4a93959eff089fd13, type: 3}
   m_PackedSpriteNamesToIndex:
+  - TileMap_11
+  - TileMap_10
+  - TileMap_12
   - TileMap_8
+  - TileMap_9
   - TileMap_6
   - TileMap_7
   - TileMap_4

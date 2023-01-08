@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
 
 	private Toolbelt _toolbelt;
 
+	private Inventory _inventory;
+
 	// Start is called before the first frame update
 	void Start()
     {
@@ -52,7 +54,9 @@ public class PlayerController : MonoBehaviour
 
 		_tileMap = FindObjectOfType<TileMapManager>();
 
-		_toolbelt = GetComponent<Toolbelt>();
+		_toolbelt = FindObjectOfType<Toolbelt>();
+
+		_inventory = FindObjectOfType<Inventory>();
 
 		Scythe.SetActive(false);
     }
@@ -100,7 +104,7 @@ public class PlayerController : MonoBehaviour
         var movement = PlayerControls.ReadValue<Vector2>();
 		var click = PlayerClicked.WasPressedThisFrame();
 		var rightClick = PlayerRightClicked.WasPerformedThisFrame();
-		string tool = _toolbelt.GetCurrentTool().Name;
+		string tool = _toolbelt.GetCurrentTool()?.Name;
 
 		SetFacing(movement);
 		UpdateScythe(click);
@@ -164,8 +168,12 @@ public class PlayerController : MonoBehaviour
 	{
 		if (rightClicked)
 		{
-			Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-			_tileMap.Plant(mousePosition);
+			if (_inventory.CanRemove(_toolbelt.GetCurrentTool()))
+			{
+				Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+				if (_tileMap.Plant(mousePosition, _toolbelt.GetCurrentTool()))
+					_toolbelt.Remove();
+			}
 		}
 	}
 
